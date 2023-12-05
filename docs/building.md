@@ -1,4 +1,4 @@
-# In order to build libip2, please export a few environment variables. The current version only support linux x86, however the base libtorrent supports arm and intel, we will make changes accordingly. 
+#### In order to build libip2, please export a few environment variables. The current version only support linux x86, however the base libtorrent supports arm and intel, we will make changes accordingly. 
 
 ## ip2 lib name shall be lower case
 ## Basic env
@@ -24,7 +24,7 @@ Steps:
 2. tar xzf boost.tar.gz
 3. mv boost_${BOOST_VERSION} boost  #boost 
 4. cd boost  
-5. ./bootstrap.sh --with-toolset=gcc  #boost use bootstrap to build itself. 
+5. ./bootstrap.sh --with-toolset=gcc  #boost use bootstrap to build intial b2 excutable; you can furthur do ./b2 and ./b2 install to complete boost lib, but with b2, it is sufficient to compile libip2
 ```
 
 ### Setup openssl
