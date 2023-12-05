@@ -3,23 +3,31 @@
 
 ## Roadmap
 
+The first stage is that we build libtau to help blockchain nodes communicate without registration to central server. 
+The fastest way is to modifiy libtorrent code base to adopt use public key as node ID, so it is universal accesible and be able to accepted as a crypto wallet address. 
+
 ### [libTAU](https://github.com/Tau-Coin/libTAU)
 
- libTAU is forked from [libtorrent](https://github.com/arvidn/libtorrent). libtorrent uses ip address as node id for DHT network. Differently, libTAU uses public key as its node id, so the nodes with the nearest public key automatically compose a "captrue swarm". By "captrue swarm" a node can be located very easily.
+ libTAU is forked from [libtorrent](https://github.com/arvidn/libtorrent). libtorrent uses ip address as node id for DHT network. 
+ 
+ Differently, libTAU uses public key as its node id, so the nodes with the nearest public key automatically compose a "captrue swarm". By "captrue swarm" a node can be located very easily.
+
+###ip2 is a upgrade on libTAU to make larger blob of data to be transferred rather than just 1kb libtorrent DHT was using. 
 
 ### IP2
 
  IP2 is forked from [libTAU](https://github.com/Tau-Coin/libTAU). Compared with libTAU, BLOB(Binary Large Object) can be transfered.
 
-## Building
 
- See [building.md](https://github.com/Tau-Coin/IP2/blob/main/docs/building.md) for more details on how to build and install.
+## Building the project
+
+ See [building.md](https://github.com/wuzhengy/ip2/blob/main/docs/building.md) for more details on how to build and install.
 
 ## Usage
 
 ### API
  
- See [API](https://github.com/Tau-Coin/IP2/blob/main/docs/API.txt) for more details on how to call ip2 API.
+ See [API](https://github.com/wuzhengy/ip2/blob/main/docs/API.txt) for more details on how to call ip2 API.
 
 ### Example
 
@@ -50,7 +58,7 @@
 	session ses(sp_param);
 ```
 
- For more detail, please see ip-shell [main function](https://github.com/Tau-Coin/ip2-shell/blob/master/src/main.cpp).
+ For more detail, please see ip-shell [main function](https://github.com/wuzhengy/ip2-shell/blob/master/src/main.cpp).
 
 #### 2. dispatch alerts
 
@@ -93,7 +101,7 @@
 	error_code ec = ses.relay_message(receiver, message);
 ```
 
- For more detail, please see ip2-shell [rpc commands](https://github.com/Tau-Coin/ip2-shell/blob/master/src/handler/tau_handler.cpp).
+ For more detail, please see ip2-shell [rpc commands](https://github.com/wuzhengy/ip2-shell/blob/master/src/handler/tau_handler.cpp).
 
 ## Contribute
  Now libip2 is just alpha version. If any problems, please help us with the open issues.
