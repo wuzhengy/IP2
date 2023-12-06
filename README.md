@@ -18,6 +18,8 @@ The fastest way is to modifiy libtorrent code base to adopt use public key as no
 
  IP2 is forked from [libTAU](https://github.com/Tau-Coin/libTAU). Compared with libTAU, BLOB(Binary Large Object) can be transfered.
 
+ A bit technical points. The libtorrent project starts with using IP address as source of node ID. This makes ID a bit centralized and unstable, since IP address changes without users permission in most of the time. For AI agents, we believe a universal address is needed disregarding the underneath IP detail. Therefore, in the node_id.cpp, we adopted public key as node ID. The public and private key pair got generated first time when the instance starts. 
+
 
 ## Building the project
 
