@@ -106,4 +106,4 @@ The fastest way is to modifiy libtorrent code base to adopt use public key as no
  For more detail, please see ip2-shell [rpc commands](https://github.com/wuzhengy/ip2-shell/blob/master/src/handler/tau_handler.cpp).
 
 ## Contribute
- Now libip2 is just alpha version. If any problems, please help us with the open issues.
+ Now libip2 is just alpha version. If any problems, please help us with the open issues send to wuzhengy@hotmail.com
